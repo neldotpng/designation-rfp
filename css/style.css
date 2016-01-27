@@ -1,0 +1,740 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("../fonts/glyphicons-halflings-regular.eot");
+  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #fcf9fa; }
+
+header.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  width: 100%;
+  height: 60px;
+  z-index: 999; }
+  header.top .logo {
+    max-height: 50px;
+    padding: 10px 0;
+    margin: 5px 0 0 15px; }
+
+.hero {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  height: 400px;
+  background: url("../img/header.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: #fff; }
+  .hero > div {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .hero h1 {
+    font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  .hero h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-style: italic; }
+
+nav {
+  position: relative;
+  width: 70%;
+  max-width: 800px;
+  margin: 50px auto; }
+  nav .nav {
+    position: relative;
+    height: 100px; }
+    nav .nav li {
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      width: 45px;
+      height: 45px;
+      font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #fcf9fa;
+      background-color: #fcf9fa;
+      border-radius: 50%;
+      -webkit-box-shadow: 0px 0px 0px 3px black;
+      -moz-box-shadow: 0px 0px 0px 3px black;
+      -o-box-shadow: 0px 0px 0px 3px black;
+      box-shadow: 0px 0px 0px 3px black; }
+      nav .nav li .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        vertical-align: middle; }
+      nav .nav li span {
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 22px;
+        bottom: -40px;
+        left: 50%;
+        color: #000;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%); }
+    nav .nav li:first-child {
+      left: 0;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%); }
+    nav .nav li:nth-child(2) {
+      left: 33.33%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%); }
+    nav .nav li:nth-child(3) {
+      right: 33.33%;
+      -webkit-transform: translateX(50%);
+      -moz-transform: translateX(50%);
+      -o-transform: translateX(50%);
+      transform: translateX(50%); }
+    nav .nav li:last-child {
+      right: 0;
+      -webkit-transform: translateX(50%);
+      -moz-transform: translateX(50%);
+      -o-transform: translateX(50%);
+      transform: translateX(50%); }
+    nav .nav .active {
+      background-color: #f8253d;
+      width: 45px;
+      height: 45px;
+      color: #fff;
+      -webkit-box-shadow: 0px 0px 0px 3px #f8253d;
+      -moz-box-shadow: 0px 0px 0px 3px #f8253d;
+      -o-box-shadow: 0px 0px 0px 3px #f8253d;
+      box-shadow: 0px 0px 0px 3px #f8253d; }
+      nav .nav .active .circle {
+        cursor: default; }
+      nav .nav .active span {
+        color: #f8253d; }
+    nav .nav .visited {
+      width: 45px;
+      height: 45px;
+      color: #fff;
+      background-color: #f8253d;
+      -webkit-box-shadow: 0px 0px 0px 3px #f8253d;
+      -moz-box-shadow: 0px 0px 0px 3px #f8253d;
+      -o-box-shadow: 0px 0px 0px 3px #f8253d;
+      box-shadow: 0px 0px 0px 3px #f8253d; }
+  nav .line {
+    position: absolute;
+    left: 0;
+    top: 23px;
+    width: 100%;
+    height: 3px;
+    background-color: #000; }
+
+input,
+textarea {
+  max-width: 100%; }
+
+form {
+  font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+  font-size: 22px; }
+  form input[type="text"],
+  form input[type="email"] {
+    display: block;
+    outline: none;
+    font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    padding: 0 10px;
+    height: 32px;
+    border: 1px solid #000; }
+
+label {
+  display: inline-block;
+  margin-bottom: 10px; }
+
+.initial-form section .error,
+.review-form section .error {
+  position: relative; }
+  .initial-form section .error label,
+  .review-form section .error label {
+    color: #f8253d; }
+  .initial-form section .error input,
+  .review-form section .error input {
+    border-color: #f8253d; }
+  .initial-form section .error textarea,
+  .review-form section .error textarea {
+    border-color: #f8253d; }
+.initial-form fieldset.error label,
+.review-form fieldset.error label {
+  color: #000; }
+.initial-form .general .error:after,
+.review-form .general .error:after {
+  position: absolute;
+  content: 'Required';
+  font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+  font-style: italic;
+  height: 32px;
+  padding: 0 30px;
+  top: 32px;
+  left: 390px;
+  background-color: #f8253d;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 32px; }
+.initial-form .general .error:before,
+.review-form .general .error:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #f8253d;
+  top: 38px;
+  left: 384px;
+  z-index: 0; }
+.initial-form .general .email.error:after,
+.review-form .general .email.error:after {
+  content: "Invalid email address"; }
+.initial-form .product .error .input_label,
+.initial-form .project .error .input_label,
+.review-form .product .error .input_label,
+.review-form .project .error .input_label {
+  position: relative;
+  color: #f8253d; }
+.initial-form .product .error .input_label:after,
+.initial-form .project .error .input_label:after,
+.review-form .product .error .input_label:after,
+.review-form .project .error .input_label:after {
+  position: absolute;
+  content: 'Required';
+  font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+  font-style: italic;
+  height: 32px;
+  padding: 0 30px;
+  top: -6px;
+  margin-left: 20px;
+  background-color: #f8253d;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 32px; }
+.initial-form .product .error .input_label:before,
+.initial-form .project .error .input_label:before,
+.review-form .product .error .input_label:before,
+.review-form .project .error .input_label:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #f8253d;
+  top: 0px;
+  right: -24px;
+  z-index: 0; }
+.initial-form .product .error:after,
+.initial-form .project .error:after,
+.review-form .product .error:after,
+.review-form .project .error:after {
+  position: absolute;
+  content: 'Required';
+  font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+  font-style: italic;
+  height: 32px;
+  padding: 0 30px;
+  top: 32px;
+  left: 390px;
+  background-color: #f8253d;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 32px;
+  display: none; }
+.initial-form .product .error:before,
+.initial-form .project .error:before,
+.review-form .product .error:before,
+.review-form .project .error:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #f8253d;
+  top: 38px;
+  left: 384px;
+  z-index: 0;
+  display: none; }
+.initial-form .product .p_state.error .input_label:after,
+.review-form .product .p_state.error .input_label:after {
+  content: 'Select\00a0product\00a0state'; }
+.initial-form .product .p_state.error:after,
+.review-form .product .p_state.error:after {
+  content: 'Select\00a0product\00a0state'; }
+.initial-form .project .proj_type.error .input_label:after,
+.review-form .project .proj_type.error .input_label:after {
+  content: 'Select\00a0 type\00a0 of\00a0 project'; }
+.initial-form .project .proj_type.error input[type="text"],
+.review-form .project .proj_type.error input[type="text"] {
+  border-color: #000; }
+.initial-form .project .proj_type.error:after,
+.review-form .project .proj_type.error:after {
+  content: 'Select\00a0 type\00a0 of\00a0 project'; }
+.initial-form .project .deliverables.error .input_label:after,
+.review-form .project .deliverables.error .input_label:after {
+  content: 'Select\00a0 all\00a0 that\00a0 apply'; }
+.initial-form .project .deliverables.error input[type="text"],
+.review-form .project .deliverables.error input[type="text"] {
+  border-color: #000; }
+.initial-form .project .deliverables.error:after,
+.review-form .project .deliverables.error:after {
+  content: 'Select\00a0 all\00a0 that\00a0 apply'; }
+
+.initial-form {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto; }
+  .initial-form section {
+    width: 100%;
+    display: none; }
+  .initial-form .form_input {
+    margin-bottom: 38px; }
+  .initial-form .general input {
+    width: 380px; }
+  .initial-form .product input[type="text"] {
+    width: 380px; }
+  .initial-form .product textarea {
+    width: 680px;
+    height: 100px;
+    resize: none;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+    outline: none;
+    padding: 5px 10px;
+    line-height: 22px;
+    overflow: auto; }
+  .initial-form .product input[type="text"].other_text {
+    width: 200px; }
+  .initial-form .project textarea {
+    width: 680px;
+    height: 100px;
+    resize: none;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+    outline: none;
+    padding: 5px 10px;
+    line-height: 22px;
+    overflow: auto; }
+  .initial-form .project .constraints,
+  .initial-form .project .deadlines {
+    height: 50px; }
+  .initial-form .project input[type="text"].other_text {
+    width: 200px; }
+  .initial-form span.optional {
+    font-size: 18px;
+    color: #959595; }
+  .initial-form .incomplete {
+    color: #f8253d;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 40px;
+    visibility: hidden; }
+
+.sub {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 22px;
+  font-style: italic; }
+
+fieldset {
+  margin-bottom: 40px; }
+  fieldset legend {
+    margin-bottom: 10px; }
+  fieldset input {
+    font-size: 18px; }
+  fieldset input[type="checkbox"] {
+    display: none; }
+  fieldset input[type="radio"] {
+    display: none; }
+  fieldset label {
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 12px;
+    height: 32px;
+    padding-top: 7px;
+    padding-left: 30px;
+    cursor: pointer;
+    cursor: hand; }
+  fieldset label:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #fff;
+    border: 1px solid #000; }
+  fieldset input[type="checkbox"] + label:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e013";
+    border-radius: 5px;
+    text-align: center;
+    line-height: 21px;
+    color: #fff;
+    vertical-align: middle;
+    font-size: 12px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  fieldset input[type="radio"] + label:after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    background-color: #f8253d;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  fieldset input[type="radio"]:checked + label:after {
+    opacity: 1; }
+  fieldset input[type="checkbox"]:checked + label:before {
+    color: #f8253d; }
+  fieldset input[type="text"] {
+    display: inline-block;
+    margin-left: 20px; }
+  fieldset ul {
+    float: left;
+    margin-right: 75px; }
+    fieldset ul li:last-child label {
+      margin-bottom: 0; }
+  fieldset ul:last-child {
+    margin: 0; }
+
+.review-form {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto; }
+  .review-form input[type="text"].other_text {
+    width: 200px; }
+  .review-form .form_input {
+    margin-bottom: 38px; }
+  .review-form h2 {
+    padding: 25px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px; }
+  .review-form section {
+    margin: 0 auto 30px;
+    width: 100%;
+    padding: 0 7.5% 20px;
+    background-color: #e7e2e3; }
+    .review-form section input[type="text"],
+    .review-form section input[type="email"] {
+      width: 380px; }
+  .review-form textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+    outline: none;
+    padding: 5px 10px;
+    line-height: 22px;
+    overflow: auto; }
+  .review-form .constraints,
+  .review-form .deadlines {
+    height: 50px; }
+  .review-form .incomplete {
+    color: #f8253d;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 30px;
+    visibility: hidden; }
+
+button {
+  display: inline-block;
+  outline: none;
+  padding: 18px 15px;
+  text-transform: uppercase;
+  font-family: "Futura PT", "Futura-PT", "Futura", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  cursor: hand;
+  margin-bottom: 50px; }
+
+.back {
+  background-color: #e5e0e1;
+  border-bottom: 5px solid #b5b3b3;
+  color: #000;
+  margin-right: 20px; }
+
+.next,
+.show-modal,
+.submit {
+  background-color: #f8253d;
+  border-bottom: 5px solid #b0414e; }
+
+.show-modal {
+  width: 200px; }
+
+.modal-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  max-width: 85%;
+  background-color: #e7e2e3;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .modal-form header {
+    position: relative;
+    height: 60px;
+    background-color: #000; }
+    .modal-form header h4 {
+      text-align: center;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 60px;
+      vertical-align: middle; }
+    .modal-form header .close {
+      position: absolute;
+      transform: rotate(45deg);
+      color: #fff;
+      font-size: 48px;
+      top: 0;
+      right: 10px;
+      cursor: hand;
+      cursor: pointer; }
+  .modal-form p {
+    width: 80%;
+    margin: 40px auto 30px;
+    text-align: center; }
+  .modal-form p.question {
+    margin-top: 0;
+    margin-bottom: 120px; }
+  .modal-form button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    display: block;
+    float: left; }
+  .modal-form button.close,
+  .modal-form .ok {
+    width: 50%;
+    background-color: #a29e9f;
+    border-bottom: 5px solid #5b5959; }
+  .modal-form button.submit {
+    width: 50%;
+    left: auto;
+    right: 0;
+    -webkit-transition: width 0.3s ease-in, padding 0.3s ease 0.3s;
+    -moz-transition: width 0.3s ease-in, padding 0.3s ease 0.3s;
+    -o-transition: width 0.3s ease-in, padding 0.3s ease 0.3s;
+    transition: width 0.3s ease-in, padding 0.3s ease 0.3s; }
+  .modal-form button.animate {
+    width: 100%;
+    padding-bottom: 215px;
+    cursor: default; }
+  .modal-form button.ok {
+    display: none;
+    width: 100%; }
+
+.modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: #000; }
+
+@media screen and (max-width: 1024px) {
+  .review-form .form_input {
+    margin-bottom: 55px; }
+  .review-form fieldset {
+    margin-bottom: 55px; }
+  .review-form div.optional {
+    margin-bottom: 38px; }
+  .review-form .general .error:after {
+    font-size: 16px;
+    left: 0;
+    top: auto;
+    width: auto;
+    bottom: -42px;
+    padding: 0 20px; }
+  .review-form .general .error:before {
+    left: 5px;
+    top: auto;
+    bottom: -15px;
+    border: none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f8253d; }
+  .review-form .product .error .input_label:after,
+  .review-form .project .error .input_label:after {
+    display: none; }
+  .review-form .product .error .input_label:before,
+  .review-form .project .error .input_label:before {
+    display: none; }
+  .review-form .product .error:after,
+  .review-form .project .error:after {
+    display: block;
+    font-size: 18px;
+    left: 0;
+    top: auto;
+    width: auto;
+    bottom: -42px;
+    padding: 0px 15px; }
+  .review-form .product .error:before,
+  .review-form .project .error:before {
+    display: block;
+    left: 5px;
+    top: auto;
+    bottom: -15px;
+    border: none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f8253d; }
+  .review-form fieldset ul:nth-child(3) li:last-child label {
+    margin-bottom: 12px; } }
+@media screen and (max-width: 640px) {
+  .initial-form {
+    width: 75%; }
+
+  .initial-form .form_input {
+    margin-bottom: 55px; }
+  .initial-form fieldset {
+    margin-bottom: 55px; }
+  .initial-form div.optional {
+    margin-bottom: 38px; }
+  .initial-form .general .error:after {
+    font-size: 16px;
+    left: 0;
+    top: auto;
+    width: auto;
+    bottom: -42px;
+    padding: 0 20px; }
+  .initial-form .general .error:before {
+    left: 5px;
+    top: auto;
+    bottom: -15px;
+    border: none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f8253d; }
+  .initial-form .product .error .input_label:after,
+  .initial-form .project .error .input_label:after {
+    display: none; }
+  .initial-form .product .error .input_label:before,
+  .initial-form .project .error .input_label:before {
+    display: none; }
+  .initial-form .product .error:after,
+  .initial-form .project .error:after {
+    display: block;
+    font-size: 18px;
+    left: 0;
+    top: auto;
+    width: auto;
+    bottom: -42px;
+    padding: 0px 15px; }
+  .initial-form .product .error:before,
+  .initial-form .project .error:before {
+    display: block;
+    left: 5px;
+    top: auto;
+    bottom: -15px;
+    border: none;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f8253d; }
+  .initial-form fieldset ul:nth-child(3) li:last-child label {
+    margin-bottom: 12px; }
+
+  .review-form {
+    width: 75%; }
+    .review-form ul:nth-child(2) li:last-child label {
+      margin-bottom: 12px; } }
+@media screen and (max-width: 480px) {
+  nav .nav li {
+    width: 24px;
+    height: 24px; }
+    nav .nav li .circle {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 18px; }
+    nav .nav li span {
+      font-size: 16px; }
+  nav .nav .active,
+  nav .nav .visited {
+    width: 24px;
+    height: 24px; }
+  nav .line {
+    top: 12px; }
+
+  .hero h1 {
+    font-size: 30px; }
+  .hero h2 {
+    font-size: 16px; }
+
+  .initial-form {
+    width: 80%; }
+
+  .review-form {
+    width: 85%; }
+    .review-form input[type="text"].other_text {
+      width: 150px; } }
+
+/*# sourceMappingURL=style.css.map */

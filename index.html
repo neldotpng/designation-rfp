@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Request For Project | DESIGNATION</title>
+	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="top">
+		<a href="http://designation.io" target="_blank">
+			<img src="img/logo_white.png" alt="DESIGNATION Logo" class="logo">
+		</a>
+	</header>
+
+	<main>
+		<header class="hero">
+			<div>
+				<h1>Project Request Page</h1>
+				<h2>We'd Love To Work With You</h2>
+			</div>
+		</header>
+
+		<nav>
+			<ul class="nav">
+				<li class="visited active">
+					<i class="circle">1</i>
+					<span>General</span>
+				</li>
+				<li>
+					<i class="circle">2</i>
+					<span>Product</span>
+				</li>
+				<li>
+					<i class="circle">3</i>
+					<span>Project</span>
+				</li>
+				<li>
+					<i class="circle">4</i>
+					<span>Review</span>
+				</li>
+			</ul>
+
+			<div class="line"></div>
+		</nav>
+		
+		<form class="initial-form clearfix" novalidate>
+			<section class="general" id="general">
+				<div class="form_input required">
+					<label for="company">Company</label>
+					<input name="company" type="text" id="company" required>
+				</div>
+
+				<div class="form_input required">
+					<label for="contact">Primary Contact Name</label>
+					<input name="contact" type="text" id="contact" required>
+				</div>
+
+				<div class="form_input email required">
+					<label for="email">Contact Email</label>
+					<input name="email" type="email" id="email" required>
+				</div>
+
+				<div class="form_input required">
+					<label for="location">Location (City)</label>
+					<input name="location" type="text" id="location" required>
+				</div>
+
+				<p class="incomplete">Please complete the <span class="required_num"></span> section<span class="plural">s</span> highlighted in red</p>
+
+				<button class="next" type="button" data-section="#general" data-nav="#product">Next: Product &#x2192;</button>
+			</section>
+
+			<section class="product" id="product">
+				<div class="form_input required">
+					<label class="input_label" for="product">Product Name</label>
+					<input name="product" type="text" id="product" required>
+				</div>
+
+				<div class="form_input required">
+					<label class="input_label" for="p_description">Product Description</label>
+					<p class="sub">No more than 3 sentences</p>
+					<textarea name="p_description" type="text" id="p_description" required></textarea>
+				</div>
+
+				<fieldset class="p_state required">
+					<legend class="input_label">Product State</legend>
+					<ul>
+						<li>
+							<input type="radio" name="p_state" value="Concept" id="concept" required>
+							<label for="concept">Concept</label>
+						</li>
+						<li>
+							<input type="radio" name="p_state" value="Pre-launch" id="prelaunch">
+							<label for="prelaunch">Pre-launch</label>
+						</li>
+						<li>
+							<input type="radio" name="p_state" value="Beta" id="beta">
+							<label for="beta">Beta</label>
+						</li>
+						<li>
+							<input type="radio" name="p_state" value="Live" id="live">
+							<label for="live">Live</label>
+						</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="assets optional">
+					<legend>Existing Assets <span class="optional">(optional)</span></legend>
+					<p class="sub">Select all that apply</p>
+					<ul>
+						<li>
+							<input type="checkbox" name="assets" id="market_research" value="market_research">
+							<label for="market_research">Market research</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets" id="user_data" value="user_data">
+							<label for="user_data">User data</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets" id="wireframes" value="wireframes">
+							<label for="wireframes">Wireframes</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets" id="prototype" value="prototype">
+							<label for="prototype">Prototype</label>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<input type="checkbox" name="assets" id="style_guide" value="style_guide">
+							<label for="style_guide">Style guide</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets" id="high_fi_mockups" value="high_fi_mockups">
+							<label for="high_fi_mockups">High fidelity mockups</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets" id="ui_kit" value="ui_kit">
+							<label for="ui_kit">UI kit</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets" id="other_asset" value="other_asset">
+							<label for="other_asset">Other</label>
+							<input name="other_asset" type="text" class="other_text">
+						</li>
+					</ul>
+				</fieldset>
+
+				<div class="form_input optional">
+					<label for="target_market">Target Market <span class="optional">(optional)</span></label>
+					<p class="sub">Include information such as age range, gender, occupation, etc.</p>
+					<input name="target_market" type="text" id="target_market">
+				</div>
+
+				<div class="form_input optional">
+					<label for="competitors">Competitors <span class="optional">(optional)</span></label>
+					<input name="competitors" type="text" id="competitors">
+				</div>
+
+				<p class="incomplete">Please complete the <span class="required_num"></span> section<span class="plural">s</span> highlighted in red</p>
+				
+				<button class="back" type="button" data-section="#product" data-nav="#general">&#8592; Back</button>
+				<button class="next" type="button" data-section="#product" data-nav="#project">Next: Project &#x2192;</button>
+			</section>
+
+			<section class="project" id="project">
+				<fieldset class="proj_type required">
+					<legend class="input_label">Type of Project</legend>
+					<p class="sub">Select all that apply</p>
+					<ul>
+						<li>
+							<input type="checkbox" name="proj_type" id="mobile_app" value="mobile_app" required>
+							<label for="mobile_app">Mobile app</label>
+						</li>
+						<li>
+							<input type="checkbox" name="proj_type" id="responsive_web" value="responsive_web">
+							<label for="responsive_web">Responsive web (desktop, tablet, mobile)</label>
+						</li>
+						<li>
+							<input type="checkbox" name="proj_type" id="other_type" value="other_type">
+							<label for="other_type">Other</label>
+							<input name="other_type" type="text" clsas="other_text">
+						</li>
+					</ul>
+				</fieldset>
+
+				<div class="form_input required">
+					<label class="input_label" for="proj_description">Project Description</label>
+					<p class="sub">Describe what work you would like done during the project with DESIGNATION</p>
+					<textarea name="proj_description" type="text" id="proj_description" required></textarea>
+				</div>
+
+				<fieldset class="deliverables required">
+					<legend class="input_label">Desired Deliverables</legend>
+					<p class="sub">Select all that apply</p>
+					<ul>
+						<li>
+							<input type="checkbox" name="deliverables" id="d_research" value="d_research">
+							<label for="d_research">Market / User research</label>
+						</li>
+						<li>
+							<input type="checkbox" name="deliverables" id="user_testing" value="user_testing">
+							<label for="user_testing">User testing</label>
+						</li>
+						<li>
+							<input type="checkbox" name="deliverables" id="d_wireframes" value="d_wireframes">
+							<label for="d_wireframes">Wireframes</label>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<input type="checkbox" name="deliverables" id="visual_design" value="visual_design">
+							<label for="visual_design">Visual design</label>
+						</li>
+						<li>
+							<input type="checkbox" name="deliverables" id="d_high_fi_mockups" value="d_high_fi_mockups">
+							<label for="d_high_fi_mockups">High fidelity mockups</label>
+						</li>
+						<li>
+							<input type="checkbox" name="deliverables" id="other_deliverables" value="other_deliverables">
+							<label for="other_deliverables">Other</label>
+							<input name="other_deliverables" type="text" class="other_text">
+						</li>
+					</ul>
+				</fieldset>
+
+				<div class="form_input optional">
+					<label for="constraints">Technological Constraints <span class="optional">(optional)</span></label>
+					<p class="sub">List any technologies or frameworks you are using or other relevant technological constraints</p>
+					<textarea name="constraints" type="text" id="constraints" class="constraints"></textarea>
+				</div>
+
+				<div class="form_input optional">
+					<label for="deadlines">Deadlines <span class="optional">(optional)</span></label>
+					<p class="sub">This is not how soon you would like the work done. Rather, list any external deadlines that our team should be aware of</p>
+					<textarea name="deadlines" type="text" id="deadlines" class="deadlines"></textarea>
+				</div>
+
+				<div class="form_input optional">
+					<label for="additional_info">Additional Information <span class="optional">(optional)</span></label>
+					<p class="sub">Anything else you would like us to know?</p>
+					<textarea name="additional_info" type="text" id="additional_info"></textarea>
+				</div>
+
+				<p class="incomplete">Please complete the <span class="required_num"></span> section<span class="plural">s</span> highlighted in red</p>
+
+				<button class="back" type="button" data-section="#project" data-nav="#product">&#8592; Back</button>
+				<button class="next serialize-cta" type="button" data-section="#project" data-nav="#review">Next: Review &#x2192;</button>
+			</section>
+		</form>
+
+		<form class="review-form" method="post" id="review" novalidate>
+			<section class="general">
+				<h2>General</h2>
+
+				<div class="form_input required">
+					<label for="company_review">Company</label>
+					<input name="company_review" type="text" id="company_review" required>
+				</div>
+
+				<div class="form_input required">
+					<label for="contact_review">Primary Contact Name</label>
+					<input name="contact_review" type="text" id="contact_review" required>
+				</div>
+
+				<div class="form_input email required">
+					<label for="email_review">Contact Email</label>
+					<input name="email_review" type="email" id="email_review" required>
+				</div>
+
+				<div class="form_input required">
+					<label for="location_review">Location (City)</label>
+					<input name="location_review" type="text" id="location_review" required>
+				</div>
+			</section>
+
+			<section class="product">
+				<h2>Product</h2>
+
+				<div class="form_input required">
+					<label class="input_label" for="product_review">Product Name</label>
+					<input name="product_review" type="text" id="product_review" required>
+				</div>
+
+				<div class="form_input required">
+					<label class="input_label" for="p_description_review">Product Description</label>
+					<p class="sub">No more than 3 sentences</p>
+					<textarea name="p_description_review" type="text" id="p_description_review" required></textarea>
+				</div>
+
+				<fieldset class="p_state required">
+					<legend class="input_label">Product State</legend>
+					<ul>
+						<li>
+							<input type="radio" name="p_state_review" value="Concept" id="concept_review" required>
+							<label for="concept_review">Concept</label>
+						</li>
+						<li>
+							<input type="radio" name="p_state_review" value="Pre-launch" id="prelaunch_review">
+							<label for="prelaunch_review">Pre-launch</label>
+						</li>
+						<li>
+							<input type="radio" name="p_state_review" value="Beta" id="beta_review">
+							<label for="beta_review">Beta</label>
+						</li>
+						<li>
+							<input type="radio" name="p_state_review" value="Live" id="live_review">
+							<label for="live_review">Live</label>
+						</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="assets">
+					<legend>Existing Assets <span class="optional">(optional)</span></legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="assets_review" id="market_research_review" value="market_research_review">
+							<label for="market_research_review">Market research</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets_review" id="user_data_review" value="user_data_review">
+							<label for="user_data_review">User data</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets_review" id="wireframes_review" value="wireframes_review">
+							<label for="wireframes_review">Wireframes</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets_review" id="prototype_review" value="prototype_review">
+							<label for="prototype_review">Prototype</label>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<input type="checkbox" name="assets_review" id="style_guide" value="style_guide">
+							<label for="style_guide">Style guide</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets_review" id="high_fi_mockups_review" value="high_fi_mockups_review">
+							<label for="high_fi_mockups_review">High fidelity mockups</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets_review" id="ui_kit_review" value="ui_kit_review">
+							<label for="ui_kit_review">UI kit</label>
+						</li>
+						<li>
+							<input type="checkbox" name="assets_review" id="other_asset_review" value="other_asset_review">
+							<label for="other_asset_review">Other</label>
+							<input name="other_asset_review" type="text" class="other_text">
+						</li>
+					</ul>
+				</fieldset>
+
+				<div class="form_input">
+					<label for="target_market_review">Target Market <span class="optional">(optional)</span></label>
+					<p class="sub">Include information such as age range, gender, occupation, etc.</p>
+					<input name="target_market_review" type="text" id="target_market_review">
+				</div>
+
+				<div class="form_input">
+					<label for="competitors_review">Competitors <span class="optional">(optional)</span></label>
+					<input name="competitors_review" type="text" id="competitors_review">
+				</div>
+			</section>
+
+			<section class="project">
+				<h2>Project</h2>
+
+				<fieldset class="proj_type required">
+					<legend class="input_label">Type of Project</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="proj_type_review" id="mobile_app_review" value="mobile_app_review" required>
+							<label for="mobile_app_review">Mobile app</label>
+						</li>
+						<li>
+							<input type="checkbox" name="proj_type_review" id="responsive_web_review" value="responsive_web_review">
+							<label for="responsive_web_review">Responsive web (desktop, tablet, mobile)</label>
+						</li>
+						<li>
+							<input type="checkbox" name="proj_type_review" id="other_type_review" value="other_type_review">
+							<label for="other_type_review">Other</label>
+							<input name="other_type_review" type="text" class="other_text">
+						</li>
+					</ul>
+				</fieldset>
+
+				<div class="form_input required">
+					<label class="input_label" for="proj_description_review">Project Description</label>
+					<p class="sub">Describe what work you would like done during the project with DESIGNATION</p>
+					<textarea name="proj_description_review" type="text" id="proj_description_review" required></textarea>
+				</div>
+
+				<fieldset class="deliverables required">
+					<legend class="input_label">Desired Deliverables</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="deliverables_review" id="d_research_review" value="d_research_review">
+							<label for="d_research_review">Market / User research</label>
+						</li>
+						<li>
+							<input type="checkbox" name="deliverables_review" id="user_testing_review" value="user_testing_review">
+							<label for="user_testing_review">User testing</label>
+						</li>
+						<li>
+							<input type="checkbox" name="deliverables_review" id="d_wireframes_review" value="d_wireframes_review">
+							<label for="d_wireframes_review">Wireframes</label>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<input type="checkbox" name="deliverables_review" id="visual_design_review" value="visual_design_review">
+							<label for="visual_design_review">Visual design</label>
+						</li>
+						<li>
+							<input type="checkbox" name="deliverables_review" id="d_high_fi_mockups_review" value="d_high_fi_mockups_review">
+							<label for="d_high_fi_mockups_review">High fidelity mockups</label>
+						</li>
+						<li>
+							<input type="checkbox" name="deliverables_review" id="other_deliverables_review" value="other_deliverables_review">
+							<label for="other_deliverables_review">Other</label>
+							<input name="other_deliverables_review" type="text" class="other_text">
+						</li>
+					</ul>
+				</fieldset>
+
+				<div class="form_input">
+					<label for="constraints_review">Technological Constraints <span class="optional">(optional)</span></label>
+					<p class="sub">List any technologies or frameworks you are using or other relevant technological constraints</p>
+					<textarea name="constraints_review" type="text" id="constraints_review" class="constraints"></textarea>
+				</div>
+
+				<div class="form_input">
+					<label for="deadlines_review">Deadlines <span class="optional">(optional)</span></label>
+					<p class="sub">This is not how soon you would like the work done. Rather, list any external deadlines that our team should be aware of</p>
+					<textarea name="deadlines_review" type="text" id="deadlines_review" class="deadlines"></textarea>
+				</div>
+
+				<div class="form_input">
+					<label for="additional_info_review">Additional Information <span class="optional">(optional)</span></label>
+					<p class="sub">Anything else you would like us to know?</p>
+					<textarea name="additional_info_review" type="text" id="additional_info_review"></textarea>
+				</div>
+			</section>
+
+			<p class="incomplete">Please complete the <span class="required_num"></span> section<span class="plural">s</span> highlighted in red</p>
+
+			<button type="button" class="show-modal">SUBMIT</button>
+				
+			<div class="modal">
+				<div class="modal-form">
+					<header>
+						<h4>Confirm Submission</h4>
+						<span class="close">&#43;</span>
+					</header>
+
+					<p class="first">By clicking submit your Project Request will be submitted.</p>
+					<p class="question">Would you like to continue?</p>
+					
+					<button type="button" class="close">BACK</button>
+					<button type="submit" class="submit">SUBMIT</button>
+
+					<button type="button" class="ok">OK</button>
+				</div>
+			</div>
+		</form>
+	</main>
+
+	<footer>FILLER BUOI</footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.8/jquery.form-validator.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
